@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style/header_style.css">
+<script src="/scripts/clock.js"></script>
+<script>
+function yahoo() {
+  var myAudio = document.getElementById("yahoo");
+  myAudio.currentTime=0;
+  myAudio.play();
+}
+</script>
+</head>
+<body>
+	<h1 id="clock" >Tick Tock</h1>
+	<h2>This is a website.</h2>
+
+	<div id="menubar">
+		<ul class="menu">
+			<li id="menu_home"><a href="/index.html">Home</a></li>
+			<li id="menu_art"><a href="/art_gallery.html">Art</a></li>
+			<li id="menu_programming"><a href="/programming.html">Programming</a></li>
+			<li><a>Writing</a></li>
+			<li onClick="yahoo()">Yahoo</li>
+		</ul>
+	</div>
+
+<audio id="yahoo">
+	<source src="/audio/Getting_a_Star.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

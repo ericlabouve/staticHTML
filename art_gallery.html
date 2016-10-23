@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style/common.css">
+<link rel="stylesheet" type="text/css" href="style/art_gallery_style.css">
+<script src="scripts/jquery-2.1.4.min.js"></script>
+</head>
+<header></header>
+<aside id="nav_bar">
+  <ul class="nav_links">
+    <li>Hello</li>
+  </ul>
+</aside>
+<body>
+  <script>
+    $('header').load('/header.html');
+  </script>
+  <div class="scroll_section">
+  <div class="section">
+    <div class="section_title">
+      <h1>Art</h1>
+    </div>
+    <div class= "section_summary">
+        Art is a great hobby of mine. I enjoy creating paintings and drawings both physically and digitally.
+    </div>
+  </div>
+  <div class="section">
+    <div class="section_title">
+      <h1>Featured Art</h1>
+    </div>
+    <div class= "section_summary">
+        Anything I feel like showing off right now.
+    </div>
+    <div class="flex_gallery">
+
+      <div class="art_container">
+        <img src="/images/piano_oil_painting.jpg"/>
+        <p>
+        My first oil painting that was not just a class exercise. Had to include two separate spaces
+        with different color schemes.
+        </p>
+      </div>
+      <div class="art_container">
+        <img src="/images/dormer.jpg"/>
+        <p>
+        My first soft pastel drawing. A portrait of Natalie Dormer with funky complementary colors.
+        </p>
+      </div>
+      <div class="art_container">
+        <img src="/images/rgd/RGD_10.jpg"/>
+        <p>
+        One of several reddit gets drawn requests that I have fulfilled. Digital using Sketchbook Pro.
+        </p>
+      </div>
+      <div class="art_container">
+        <img src="/images/rgd/RGD_12.jpg"/>
+        <p>
+        A colorful colored pencil pug.
+        </p>
+      </div>
+      <div class="art_container">
+        <img src="/images/rgd/RGD_16.jpg"/>
+        <p>
+        Black colored pencil.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    var headerTop = $('header').offset().top;
+    var headerBottom = headerTop + $('header').height();
+    $('#nav_bar').css('top', headerBottom);
+
+  $(window).scroll(function () {
+    headerTop = $('header').offset().top;
+    headerBottom = headerTop + $('header').height();
+    if (headerBottom < $(window).scrollTop()) {
+      $('#nav_bar').addClass('nav_fixed');
+      $('#nav_bar').css('top', 0);
+    }
+    else {
+      $('#nav_bar').removeClass('nav_fixed');
+      $('#nav_bar').css('top', headerBottom);
+    }
+  });
+});
+</script>
+</body>
+</html>
